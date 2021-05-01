@@ -40,5 +40,8 @@ class CreateSocket:
                 connection.close()
                 break
 
+            else:
+                connection.sendall(str.encode("I dont found a candidate with this number!"))
+
             connection.sendall(data)
             connection.close()
