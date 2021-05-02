@@ -11,6 +11,8 @@ class CreateSocket:
         self.election.set_candidates(eduardo='22', juninho_capixaba='33')
 
     def server_socket(self) -> None:
+        # Para usar servidor externo:
+        # socket.gethostname()
         self.sock.bind(('localhost', 50005))
         self.sock.listen(10)
 
